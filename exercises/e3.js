@@ -10,7 +10,12 @@
 
 export function getAverage(array) {
   // Your code goes here...
-
+  let sum = 0;
+  let average = 0;
+  for(let i = 0;i<array.length; i++){
+    sum = sum+array[i];
+  }
+  return average = sum/array.length;
 }
 
 
@@ -22,8 +27,15 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
-
+  let sum = 0;
+  for (let char of str) {
+    let charCode = char.charCodeAt(0);
+    if (charCode >= 48 && charCode <= 57) {
+      sum += charCode - 48; 
+    }
+  }
+  
+  return sum;
 }
 
 
