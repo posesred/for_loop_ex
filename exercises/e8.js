@@ -6,8 +6,36 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
+  let greatest = 0;
+  for(let i=0; i<array.length; i++){
+    if(array[i].balance > greatest){
+      greatest = array[i].balance;
+    }
+  }
 
+  for(let x=0; x<array.length; x++){
+    if(array[x].balance == greatest){
+      return [array[x]];
+    }
+  }
 }
+
+//found on google this method 
+// export function getClientWithGreatestBalance(array) {
+//   if (array.length === 0) {
+//     return [];
+//   }
+
+//   let greatestAccount = array[0];
+
+//   for(let i=1; i<array.length; i++){
+//     if(array[i].balance > greatestAccount.balance){
+//       greatestAccount = array[i];
+//     }
+//   }
+
+//   return [greatestAccount];
+// }
 
 
 
