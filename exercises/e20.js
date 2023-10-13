@@ -7,8 +7,31 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  let combined = [];
+  let includesA = [];
+  let doesnotIncludeA = [];
+  
+  for (let i = 0; i < array.length; i++) {
+    let hasA = false;
+    for (let j = 0; j < array[i].length; j++) {
+      if (array[i][j] === 'a' || array[i][j] === 'A') { 
+        hasA = true;
+        break;
+      }
+    }
+    if (hasA) {
+      includesA.push(array[i]);
+    } else {
+      doesnotIncludeA.push(array[i]);
+    }
+  }
+  
+  combined.push(includesA);
+  combined.push(doesnotIncludeA);
+  
+  return combined;
 }
+
 
 
 // === TEST YOURSELF ===
